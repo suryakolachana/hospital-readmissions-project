@@ -30,7 +30,6 @@ The dataset used in this project is the [Hospital Readmissions Reduction Program
 
 ## Project Structure
 ├── data/
-│ └── Hospital_Readmissions_Reduction_Program_Hospital.csv
 ├── function/
 │ ├── main.py
 │ ├── schema.json
