@@ -29,7 +29,9 @@ The dataset used in this project is the [Hospital Readmissions Reduction Program
 - **End Date**: The end date of the reporting period.
 
 ## Project Structure
+hospital_readmission_project/
 ├── data/
+│ └── Hospital_Readmissions_Reduction_Program_Hospital.csv
 ├── function/
 │ ├── main.py
 │ ├── schema.json
@@ -38,6 +40,8 @@ The dataset used in this project is the [Hospital Readmissions Reduction Program
 ├── notebooks/
 │ ├── data_exploration.ipynb
 │ └── modelling_and_analysis.ipynb
+├── visualizations/
+│ └── files
 ├── ingest/
 │ ├── src/
 │ │ └── transformation.sql
