@@ -1,0 +1,62 @@
+
+### `.gitignore`
+
+Add a `.gitignore` file to exclude unnecessary files from your Git repository.
+
+```plaintext
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Terraform files
+terraform.tfstate
+terraform.tfstate.backup
+.terraform/
+.tfplan
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Virtual environment
+.venv
+venv/
+ENV/
+
+# macOS
+.DS_Store
+
+# System
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python-generated files
+*.log
+*.pot
+*.pyc
+
+# pytest
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+*.orig
+*.~ 
+*.vscode/
+.idea/
+.vscode/

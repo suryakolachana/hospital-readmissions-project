@@ -1,0 +1,14 @@
+[
+    {"name": "facility_name", "type": "STRING"},
+    {"name": "facility_id", "type": "STRING"},
+    {"name": "state", "type": "STRING"},
+    {"name": "measure_name", "type": "STRING"},
+    {"name": "number_of_discharges", "type": "STRING"},
+    {"name": "footnote", "type": "STRING"},
+    {"name": "excess_readmission_ratio", "type": "STRING"},
+    {"name": "predicted_readmission_rate", "type": "STRING"},
+    {"name": "expected_readmission_rate", "type": "STRING"},
+    {"name": "number_of_readmissions", "type": "STRING"},
+    {"name": "start_date", "type": "STRING"},
+    {"name": "end_date", "type": "STRING"}
+]

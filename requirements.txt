@@ -1,0 +1,7 @@
+google-cloud-bigquery
+google-cloud-storage
+pandas
+matplotlib
+seaborn
+jupyter
+pytest
