@@ -5,7 +5,7 @@ This project involves analyzing the Hospital Readmissions Reduction Program (HRR
 ## Project Overview
 
 The project includes:
-1. A Cloud Function to ingest hospital readmissions data from a Google Cloud Storage bucket into BigQuery.
+1. A Cloud Function (ELT Pipeline) to ingest hospital readmissions data from a Google Cloud Storage bucket into BigQuery.
 2. Jupyter notebooks for data exploration and analysis.
 3. Data and visualization resources.
 
@@ -56,9 +56,21 @@ hospital_readmission_project/
 └── deploy.sh
 
 
-### Cloud Function
+### Event-Driven ETL Pipeline
 
-The Cloud Function is responsible for ingesting data from a Google Cloud Storage bucket into BigQuery. The function schema is defined in `schema.json` and dynamically loaded.
+An event-driven ETL pipeline responds to events (e.g., new data file uploads) to trigger data processing. In this case, we will use Google Cloud Functions and BigQuery for our ETL pipeline.
+
+Steps in the Pipeline:
+
+ 1. Data Ingestion (Bronze Layer)
+        Trigger: A new data file is uploaded to a Google Cloud Storage bucket.
+        Action: A Cloud Function is triggered by the file upload event.
+        Processing: The Cloud Function reads the raw data from the file and loads it into a BigQuery table in the Bronze layer.
+                    The function schema is defined in `schema.json` and dynamically loaded.
+ 2. Data Transformation (Silver Layer)
+        Processing: The function/query reads data from the Bronze table, processes and cleans it (e.g., removing duplicates, handling missing values), and loads the refined data into a Silver table.
+ 3. Data Aggregation (Gold Layer)
+        Processing: The SQL queries aggregates and enriches the data (e.g., calculating metrics, summarizing data).
 
 ### Notebooks
 
@@ -67,7 +79,7 @@ The Cloud Function is responsible for ingesting data from a Google Cloud Storage
 
 ### Data
 
-The `data` folder contains the raw and processed data files used in the project.
+The `data` folder contains the raw data files used in the project.
 
 
 ## Requirements
