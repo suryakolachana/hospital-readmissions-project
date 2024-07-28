@@ -124,6 +124,10 @@ Apply the deployment:
 
     terraform apply tfplan
 
+Usage:
+
+    Upload your CSV files to the specified Google Cloud Storage bucket to trigger the Cloud Function and ingest data into BigQuery.
+
 Future Enhancements:
 
 1. File Framework to Handle Various Formats:
@@ -149,10 +153,6 @@ Future Enhancements:
 6. Data Modeling:
 
     Design and implement a data model based on dimensional modeling techniques to capture dimensions and related facts, optimizing for query performance and scalability.
-
-Usage:
-
-Upload your CSV files to the specified Google Cloud Storage bucket to trigger the Cloud Function and ingest data into BigQuery.
 
 
 
