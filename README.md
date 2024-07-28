@@ -7,7 +7,7 @@ This project involves analyzing the Hospital Readmissions Reduction Program (HRR
 The project includes:
 1. A Cloud Function (ELT Pipeline) to ingest hospital readmissions data from a Google Cloud Storage bucket into BigQuery.
 2. Jupyter notebooks for data exploration and analysis.
-3. Data and visualization resources.
+3. Data resources.
 
 ## Data Source
 
@@ -93,16 +93,17 @@ Deploying the Project:
 
 You can deploy the project using either the deploy.sh script or directly with Terraform.
 
-Using deploy.sh
+Using deploy.sh:
 
 Authenticate with Google Cloud:
-    ```bash
+
+
     gcloud auth login
 
     gcloud config set project your-project-id
 
 Run the deployment script:
-    ```bash
+
     ./deploy.sh
 
 Using Terraform Directly:
