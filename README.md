@@ -27,35 +27,7 @@ The dataset used in this project is the [Hospital Readmissions Reduction Program
 - **Number of Readmissions**: Actual number of readmissions.
 - **Start Date**: The start date of the reporting period.
 - **End Date**: The end date of the reporting period.
-
-## Project Structure
-
-project_directory/
-├── data/
-│ └── Data Files
-├── function/
-│ ├── main.py
-│ ├── schema.json
-│ ├── requirements.txt
-│ └── other_files.py
-├── notebooks/
-│ ├── data_exploration.ipynb
-│ └── modelling_and_analysis.ipynb
-├── visualizations/
-│ └── (Your visualization files here)
-├── ingest/
-│ ├── src/
-│ │ └── transformation.sql
-│ ├── main.py
-│ ├── requirements.txt
-├── terraform_gcf/
-│ ├── main.tf
-│ ├── variables.tf
-│ ├── outputs.tf
-│ ├── terraform.tfvars
-│ └── function.zip
-├── cloudbuild.yaml
-└── deploy.sh
+  
 
 ### Event-Driven ETL Pipeline
 
