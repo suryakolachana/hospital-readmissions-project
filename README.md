@@ -29,6 +29,7 @@ The dataset used in this project is the [Hospital Readmissions Reduction Program
 - **End Date**: The end date of the reporting period.
 
 ## Project Structure
+
 hospital_readmission_project/
 ├── data/
 │ └── Hospital_Readmissions_Reduction_Program_Hospital.csv
@@ -63,13 +64,22 @@ An event-driven ETL pipeline responds to events (e.g., new data file uploads) to
 Steps in the Pipeline:
 
  1. Data Ingestion (Bronze Layer)
+        
         Trigger: A new data file is uploaded to a Google Cloud Storage bucket.
+        
         Action: A Cloud Function is triggered by the file upload event.
+        
         Processing: The Cloud Function reads the raw data from the file and loads it into a BigQuery table in the Bronze layer.
                     The function schema is defined in `schema.json` and dynamically loaded.
+
  2. Data Transformation (Silver Layer)
-        Processing: The function/query reads data from the Bronze table, processes and cleans it (e.g., removing duplicates, handling missing values), and loads the refined data into a Silver table.
+       
+        Processing: The function/query reads data from the Bronze table, processes and cleans it (e.g., removing duplicates, 
+        
+        handling missing values), and loads the refined data into a Silver table.
+
  3. Data Aggregation (Gold Layer)
+        
         Processing: The SQL queries aggregates and enriches the data (e.g., calculating metrics, summarizing data).
 
 ### Notebooks
@@ -99,14 +109,16 @@ The `data` folder contains the raw data files used in the project.
    ```bash
    gcloud init
 
-Installing Terraform
+Installing Terraform:
 
  1. Download Terraform: Visit the Terraform installation page and download the appropriate version for your operating system.
+
  2. Install Terraform: Follow the instructions for your OS:
         1. Windows: Unzip the downloaded file and move the terraform.exe to a directory included in your system's PATH.
         2. MacOS and Linux: Unzip the downloaded file and move the terraform binary to /usr/local/bin.
 
-Deploying the Project
+Deploying the Project:
+
 You can deploy the project using either the deploy.sh script or directly with Terraform.
 
 Using deploy.sh
@@ -114,24 +126,32 @@ Using deploy.sh
 Authenticate with Google Cloud:
 
  1. gcloud auth login
+
  2. gcloud config set project your-project-id
 
 Run the deployment script:
  1. ./deploy.sh
 
-Using Terraform Directly
+Using Terraform Directly:
 
 Navigate to the Terraform directory:
 
  1. cd terraform_gcf
+
  2. Initialize Terraform:
+
     terraform init
+
  3. Plan the deployment:
+
     terraform plan -out=tfplan
+
  4. Apply the deployment:
+
     terraform apply tfplan
 
-Usage
+Usage:
+
 Upload your CSV files to the specified Google Cloud Storage bucket to trigger the Cloud Function and ingest data into BigQuery.
 
 
