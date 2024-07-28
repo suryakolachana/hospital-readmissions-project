@@ -28,34 +28,6 @@ The dataset used in this project is the [Hospital Readmissions Reduction Program
 - **Start Date**: The start date of the reporting period.
 - **End Date**: The end date of the reporting period.
 
-## Project Structure
-
-hospital_readmission_project/
-├── data/
-│ └── Hospital_Readmissions_Reduction_Program_Hospital.csv
-├── function/
-│ ├── main.py
-│ ├── schema.json
-│ ├── requirements.txt
-│ └── other_files.py
-├── notebooks/
-│ ├── data_exploration.ipynb
-│ └── modelling_and_analysis.ipynb
-├── visualizations/
-│ └── files
-├── ingest/
-│ ├── src/
-│ │ └── transformation.sql
-│ ├── main.py
-│ ├── requirements.txt
-├── terraform_gcf/
-│ ├── main.tf
-│ ├── variables.tf
-│ ├── outputs.tf
-│ ├── terraform.tfvars
-│ └── function.zip
-└── deploy.sh
-
 
 ### Event-Driven ETL Pipeline
 
@@ -124,29 +96,30 @@ You can deploy the project using either the deploy.sh script or directly with Te
 Using deploy.sh
 
 Authenticate with Google Cloud:
+    ```bash
+    gcloud auth login
 
- 1. gcloud auth login
-
- 2. gcloud config set project your-project-id
+    gcloud config set project your-project-id
 
 Run the deployment script:
- 1. ./deploy.sh
+    ```bash
+    ./deploy.sh
 
 Using Terraform Directly:
 
 Navigate to the Terraform directory:
 
- 1. cd terraform_gcf
+    cd terraform_gcf
 
- 2. Initialize Terraform:
+Initialize Terraform:
 
     terraform init
 
- 3. Plan the deployment:
+Plan the deployment:
 
     terraform plan -out=tfplan
 
- 4. Apply the deployment:
+Apply the deployment:
 
     terraform apply tfplan
 
