@@ -154,6 +154,10 @@ Future Enhancements:
 
     Design and implement a data model based on dimensional modeling techniques to capture dimensions and related facts, optimizing for query performance and scalability.
 
+7. CI/CD Capabilities for Terraform:
+
+    Implement CI/CD capabilities using Google Cloud Build to automatically trigger deployments of Terraform resources. This will ensure that infrastructure changes are automatically applied whenever changes are pushed to the repository.
+
 
 
 

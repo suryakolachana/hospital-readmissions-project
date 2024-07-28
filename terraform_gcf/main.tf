@@ -27,6 +27,7 @@ resource "google_storage_bucket_object" "ingest_zip" {
   source = data.archive_file.ingest-source.output_path
 }
 
+#Cloud function resource creation
 resource "google_cloudfunctions_function" "function" {
   name        = var.function_name
   description = "Cloud Function to ingest data from GCS"
