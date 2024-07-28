@@ -124,6 +124,32 @@ Apply the deployment:
 
     terraform apply tfplan
 
+Future Enhancements
+
+1. File Framework to Handle Various Formats:
+
+    Extend the ETL pipeline to handle multiple file formats such as CSV, JSON, Parquet, etc., dynamically.
+
+2. Schema Validator Class:
+
+    Implement a schema validator class to validate incoming data files against predefined schemas to ensure data quality and consistency.
+
+3. Transformations with DBT or Dataform:
+
+    Move all data transformations to DBT (Data Build Tool) or Dataform for better modularity, maintainability, and collaboration.
+
+4. Data Quality Framework:
+
+    Develop a robust data quality framework to handle post-validation checks ensuring data integrity and quality across all layers.
+    
+5. Data Monitoring:
+
+    Integrate monitoring tools like Slack notifications, detailed logging, and Google Cloud Monitoring to track the status of ETL jobs and detect any issues promptly.
+
+6. Data Modeling:
+
+    Design and implement a data model based on dimensional modeling techniques to capture dimensions and related facts, optimizing for query performance and scalability.
+
 Usage:
 
 Upload your CSV files to the specified Google Cloud Storage bucket to trigger the Cloud Function and ingest data into BigQuery.
