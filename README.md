@@ -124,7 +124,7 @@ Apply the deployment:
 
     terraform apply tfplan
 
-Future Enhancements
+Future Enhancements:
 
 1. File Framework to Handle Various Formats:
 
@@ -141,7 +141,7 @@ Future Enhancements
 4. Data Quality Framework:
 
     Develop a robust data quality framework to handle post-validation checks ensuring data integrity and quality across all layers.
-    
+
 5. Data Monitoring:
 
     Integrate monitoring tools like Slack notifications, detailed logging, and Google Cloud Monitoring to track the status of ETL jobs and detect any issues promptly.
